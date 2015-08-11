@@ -62,7 +62,6 @@ def handle_client(client, addrs):
     
     if not command:
         indForever = 1
-        print str(indForever)
         while indForever:
             r = readFromClient(client)
             if not upload:
@@ -131,7 +130,6 @@ def main():
         elif o in ("-p", "--port"):
             port = int(a)
         elif o in ("-L", "--forever"):
-            print "forever man"
             listen, forever = (True, True)
         elif o in ("-u, --upload"):
             upload = True
